@@ -1,18 +1,19 @@
 /*
- *           __                          __ 
-*      _____/ /____  ______  ____  _____/ /_
- *    / ___/ //_/ / / / __ \/ __ \/ ___/ __/
- *   (__  ) ,< / /_/ / /_/ / /_/ / /  / /_  
- *  /____/_/|_|\__, / .___/\____/_/   \__/  
- *           /____/_/                  
+____  _  ______  __   __  _____   _____  ______  _      _      
+ / ___|| |/ / ___| \ \ / / | ____| |  __ \|  ____|| |    | |     
+ \___ \| ' / |      \ V /  |  _|   | |__) | |__   | |    | |     
+  ___) | . \ |___    | |   | |___  |  ___/|  __|  | |___ | |___  
+ |____/|_|\_\____|   |_|   |_____| |_|    |_|     |_____||_____|
+
+                S K Y P A N E L                  
  *              
- *  Skyport Panel 0.3.0 (Oz)
- *  (c) 2024 Matt James and contributors
+ *  Sky Panel 0.0.1 (Oz)
+ * 
  * 
 */
 
 /**
- * @fileoverview Main server file for Skyport Panel. Sets up the express application,
+ * @fileoverview Main server file for Sky Panel. Sets up the express application,
  * configures middleware for sessions, body parsing, and websocket enhancements, and dynamically loads route
  * modules. This file also sets up the server to listen on a configured port and initializes logging.
  */
@@ -230,11 +231,11 @@ app.set('views', [path.join(__dirname, 'views'), ...PluginViewsDir]);
 init();
 
 console.log(chalk.gray(ascii) + chalk.white(`version v${config.version}\n`));
-app.listen(config.port, () => log.info(`Skyport is listening on port ${config.port}`));
+app.listen(config.port, () => log.info(`Sky is listening on port ${config.port}`));
 
 app.get('*', async function(req, res){
   res.render('errors/404', {
     req,
-    name: await db.get('name') || 'Skyport'
+    name: await db.get('name') || 'Sky'
   })
 });
