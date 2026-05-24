@@ -9,5 +9,3 @@
   "databaseURL": "sqlite://skyport.db",
   "databaseTable": "skypanel",
   "ogTitle": "Sky panel",
-  "ogDescription": "This is an instance of the Sky Panel
-}
