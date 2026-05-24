@@ -1,7 +1,7 @@
 {
-  "name": "skyport",
-  "version": "0.3.0",
-  "description": "Skyport is an open source panel for managing and operating game servers and applications built using Node.js with Express and Dockerode.",
+  "name": "skypanel",
+  "version": "0.0.1",
+  "description": "Skypanel is an open source panel for managing and operating game servers and applications built using Node.js with Express and Dockerode.",
   "main": "index.js",
   "bin": {
     "skyport": "./exec/bin/index.js"
@@ -15,7 +15,7 @@
     "createUser": "node exec/createUser.js",
     "build:css": "npx tailwindcss -i ./public/tw.conf -o ./public/assets/tailwind.css --watch"
   },
-  "author": "skyportlabs",
+  "author": "skydoyt",
   "license": "ISC",
   "dependencies": {
     "@keyv/sqlite": "^3.6.7",
